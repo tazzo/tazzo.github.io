@@ -30,6 +30,7 @@
         };
 
         firebase.initializeApp(config);
+/*
         var provider = new firebase.auth.GoogleAuthProvider();
 
         firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -50,11 +51,11 @@
           // ...
           console.log(errorMessage);
         });
-
+*/
         //firebaseui
         // FirebaseUI config.
         var uiConfig = {
-          signInSuccessUrl: '<url-to-redirect-to-on-success>',
+          signInSuccessUrl: '/',
           signInOptions: [
             // Leave the lines as is for the providers you want to offer your users.
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -64,7 +65,7 @@
             firebase.auth.EmailAuthProvider.PROVIDER_ID
           ],
           // Terms of service url.
-          tosUrl: '<your-tos-url>'
+          tosUrl: '/'
         };
 
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
