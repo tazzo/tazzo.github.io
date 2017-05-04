@@ -17,7 +17,7 @@
       <script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
       <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
 
-      
+
       <script>
         // Initialize Firebase
         var config = {
@@ -50,6 +50,9 @@
           // ...
           console.log(errorMessage);
         });
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+         // The start method will wait until the DOM is loaded.
+         ui.start('#firebaseui-auth-container', uiConfig);
 
       </script>
 
